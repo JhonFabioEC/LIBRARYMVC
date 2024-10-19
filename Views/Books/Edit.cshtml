@@ -1,0 +1,30 @@
+﻿@model LIBRARYMVC_TEST.Models.ViewModels.BookVM
+
+@{
+    ViewData["Title"] = "Editar Libro";
+}
+
+<div class="row">
+    <h2>Editar Libro</h2>
+    <div class="col-sm-4">
+        <form asp-action="Edit" asp-controller="Books" method="post">
+            <input type="hidden" asp-for="Book.Id" />
+            <div class="mb-2">
+                <label class="form-label" asp-for="Book.Title"></label>
+                <input class="form-control form-control-sm" asp-for="Book.Title" type="text" />
+                <span asp-validation-for="Book.Title" class="text-danger"></span>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="Book.AuthorId"></label>
+                <select class="form-select form-select-sm" asp-for="Book.AuthorId" asp-items="@Model.AuthorList">
+                    <option selected disabled>-- Seleccionar --</option>
+                </select>
+                <span asp-validation-for="Book.AuthorId" class="text-danger"></span>
+            </div>
+            <div class="mb-2">
+                <button class="btn btn-warning btn-sm w-25" type="submit"><i class="fa-solid fa-pen-to-square"></i> Editar</button>
+                <a class="btn btn-dark btn-sm w-25" asp-action="Index" asp-controller="Books"><i class="fa-solid fa-circle-chevron-left"></i> Atras</a>
+            </div>
+        </form>
+    </div>
+</div>

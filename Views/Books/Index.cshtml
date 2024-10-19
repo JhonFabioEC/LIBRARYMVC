@@ -1,0 +1,44 @@
+﻿@model IEnumerable<LIBRARYMVC_TEST.Models.Book>
+
+@{
+    ViewData["Title"] = "Lista de Libros";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5>Lista de Libros</h5>
+    </div>
+    <div class="card-body">
+        @if (@ViewBag.Message != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                <i class="fa-solid fa-circle-check"></i> @ViewBag.Message
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        <a class="btn btn-success btn-sm" asp-action="Create" asp-controller="Books"><i class="fa-solid fa-circle-plus"></i> Crear</a>
+        <hr />
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Title)</th>
+                    <th>@Html.DisplayNameFor(model => model.Author.Name)</th>
+                    <th>Aciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Title)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Author.Name)</td>
+                        <td>
+                            <a class="btn btn-warning btn-sm" asp-action="Edit" asp-controller="Books" asp-route-id="@item.Id"><i class="fa-solid fa-pen-to-square"></i> Editar</a>
+                            <a class="btn btn-danger btn-sm" asp-action="Delete" asp-controller="Books" asp-route-id="@item.Id"><i class="fa-solid fa-trash"></i> Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

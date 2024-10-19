@@ -1,0 +1,26 @@
+﻿@model LIBRARYMVC_TEST.Models.Book
+
+@{
+    ViewData["Title"] = "Eliminar Libro";
+}
+
+<div class="row">
+    <h3 class="text-danger">¿Esta seguro de eliminar el libro?</h3>
+    <div class="col-sm-4">
+        <form asp-action="Delete" asp-controller="Books" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="mb-2">
+                <label class="form-label" asp-for="Title"></label>
+                <input class="form-control form-control-sm" asp-for="Title" type="text" disabled />
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="Author.Name"></label>
+                <input class="form-control form-control-sm" asp-for="Author.Name" type="text" disabled />
+            </div>
+            <div class="mb-2">
+                <button class="btn btn-danger btn-sm w-25" type="submit"><i class="fa-solid fa-trash"></i> Eliminar</button>
+                <a class="btn btn-dark btn-sm w-25" asp-action="Index" asp-controller="Books"><i class="fa-solid fa-circle-chevron-left"></i> Atras</a>
+            </div>
+        </form>
+    </div>
+</div>

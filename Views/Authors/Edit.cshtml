@@ -1,0 +1,23 @@
+﻿@model LIBRARYMVC_TEST.Models.Author
+
+@{
+    ViewData["Title"] = "Editar Autor";
+}
+
+<div class="row">
+    <h2>Editar Autor</h2>
+    <div class="col-sm-4">
+        <form asp-action="Edit" asp-controller="Authors" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="mb-2">
+                <label class="form-label" asp-for="Name"></label>
+                <input class="form-control form-control-sm" asp-for="Name" type="text" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="mb-2">
+                <button class="btn btn-warning btn-sm w-25" type="submit"><i class="fa-solid fa-pen-to-square"></i> Editar</button>
+                <a class="btn btn-dark btn-sm w-25" asp-action="Index" asp-controller="Authors"><i class="fa-solid fa-circle-chevron-left"></i> Atras</a>
+            </div>
+        </form>
+    </div>
+</div>
