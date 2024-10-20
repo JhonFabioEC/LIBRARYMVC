@@ -15,10 +15,6 @@
 <br />
 <div align="center">
   <h1>LIBRARYMVC</h1>
-
-  <p align="center">
-    Descubre un mundo de conocimiento con nuestra colección de libros y autores.
-  </p>
 </div>
 
 
@@ -41,6 +37,7 @@
         <li><a href="#ejecución-⏯️">Ejecución</a></li>
       </ul>
     </li>
+    <li><a href="#diagrama-entidad-relación-📁">Diagrama entidad relación</a></li>
     <li><a href="#autores-✒️">Autores</a></li>
     <li><a href="#licencia-📄">Licencia</a></li>
     <li><a href="#contactos-💬">Contactos</a></li>
@@ -52,9 +49,9 @@
 <!-- ABOUT THE PROJECT -->
 ## Acerca del proyecto
 
-![HeartBeats Screen Shot](.github/images/LibraryMVC-screenshot.gif)
+![LibraryMVC Screen Shot](.github/images/LibraryMVC-screenshot.gif)
 
-LIBRARYMVC es una aplicación web construida con ASP.NET Core y Entity Framework que permite gestionar una biblioteca digital de manera eficiente. Con esta plataforma, los usuarios pueden explorar, añadir y administrar libros, así como registrar autores y asociarlos con sus obras.
+LIBRARYMVC es una aplicación web construida con **ASP.NET Core** y **Entity Framework** que permite gestionar una biblioteca digital de manera eficiente. Con esta plataforma, los usuarios pueden explorar, añadir y administrar libros, así como registrar autores y asociarlos con sus obras.
 
 El proyecto está orientado a brindar una experiencia intuitiva mediante una interfaz basada en Bootstrap, y aprovecha SQL Server como base de datos para garantizar un manejo robusto de la información.
 
@@ -105,15 +102,9 @@ Sigue los pasos para configurar y ejecutar el proyecto en tu máquina local.
   git clone https://github.com/JhonFabioEC/LIBRARYMVC.git
   ```
 
-2. Navega al directorio del proyecto.
+2. Abre el proyecto en `Visual Studio 2022`.
 
-  ```sh
-  cd LIBRARYMVC
-  ```
-
-4. Abre el archivo `.sln` en Visual Studio 2022.
-
-5. Restaura los paquetes NuGet del proyecto:
+3. Restaura los paquetes NuGet del proyecto:
 
 - Puedes hacer esto desde Visual Studio a través del menú `Herramientas` -> `Administrador de paquetes NuGet` -> `Consola del Administrador de paquetes` y ejecutando:
 
@@ -121,7 +112,7 @@ Sigue los pasos para configurar y ejecutar el proyecto en tu máquina local.
   Update-Package
   ```
 
-6. Ejecuta el script de la base de datos:
+4. Ejecuta el script de la base de datos:
 
 - Abre `SQL Server Management Studio` o el cliente que prefieras para gestionar SQL Server.
 
@@ -154,7 +145,7 @@ Sigue los pasos para configurar y ejecutar el proyecto en tu máquina local.
   );
   ```
 
-7. Configura la conexión a SQL Server:
+5. Configura la conexión a SQL Server:
 
 - Ve al archivo `appsettings.json` y asegúrate de configurar la cadena de conexión correctamente:
 
@@ -169,6 +160,15 @@ Sigue los pasos para configurar y ejecutar el proyecto en tu máquina local.
 1. Ejecuta la aplicación desde Visual Studio:
 
 - Presiona `F5` o selecciona `Depurar` → `Iniciar sin depurar`.
+
+<p align="right">(<a href="#readme-top">Principio de página</a>)</p>
+
+
+
+<!-- ENTITY RELATIONSHIP DIAGRAM -->
+## Diagrama entidad relación 📁
+
+![LibraryMVC ERD](.github/images/LibraryMVC-erd.png)
 
 <p align="right">(<a href="#readme-top">Principio de página</a>)</p>
 
@@ -215,7 +215,7 @@ Jhon Favio España Cortes - [@jhonydev404](https://www.linkedin.com/in/jhonydev4
 [issues-url]: https://github.com/JhonFabioEC/LIBRARYMVC/issues
 
 [license-shield]: https://img.shields.io/github/license/JhonFabioEC/LIBRARYMVC.svg?style=for-the-badge
-[license-url]: https://github.com/JhonFabioEC/LIBRARYMVC/blob/master/LICENSE
+[license-url]: https://github.com/JhonFabioEC/LIBRARYMVC/blob/master/LICENSE.txt
 
 [aspnetcore-shield]: https://img.shields.io/badge/ASP.NET_Core-512BD4?style=for-the-badge&logo=dotnet&logoColor=white
 [aspnetcore-url]: https://dotnet.microsoft.com/apps/aspnet
